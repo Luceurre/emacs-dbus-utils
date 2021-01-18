@@ -37,6 +37,7 @@
 
 (defun luceurre/dbus-utils-run (code)
   "Return DBUS::Boolean t if evaluation of string CODE is sucessful."
+  (interactive "MCode: ")
   (condition-case nil
       (progn (luceurre/dbus-utils-eval-string code)
              '(:boolean t))
